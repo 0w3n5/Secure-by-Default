@@ -41,4 +41,6 @@ variable "allowed_ssh_cidrs" {
 }
 
 variable "iam_users" {
-  description = "
+  description = "List of IAM users to provision"
+  type        = list(string)
+}
