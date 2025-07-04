@@ -54,10 +54,12 @@ module "s3_secure" {
 
 
 module "iam" {
-  source = "./modules/iam"
-  users  = var.iam_users
-  tags   = var.tags
+  source            = "./modules/iam"
+  users             = var.iam_users
+  default_policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
+  tags              = var.tags
 }
+
 
 module "guardduty" {
   source            = "./modules/guardduty"
