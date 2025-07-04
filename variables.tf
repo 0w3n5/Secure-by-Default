@@ -19,14 +19,25 @@ variable "tags" {
   default     = {}
 }
 
-variable "bastion_key_name" {
-  description = "Name of the SSH key pair for accessing the Bastion host"
+variable "bastion_ami_id" {
+  description = "AMI ID for the Bastion host"
   type        = string
 }
 
-variable "ami_id" {
-  description = "AMI ID to use for Bastion host EC2 instance"
+variable "bastion_instance_type" {
+  description = "EC2 instance type for the Bastion"
   type        = string
+  default     = "t3.micro"
+}
+
+variable "key_name" {
+  description = "SSH key name"
+  type        = string
+}
+
+variable "allowed_ssh_cidrs" {
+  description = "CIDRs allowed to SSH into Bastion"
+  type        = list(string)
 }
 
 variable "iam_users" {
