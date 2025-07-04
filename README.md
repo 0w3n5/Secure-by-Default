@@ -1,7 +1,7 @@
 # --- README.md ---
 
 # Secure by Default – Terraform Blueprint for Small Teams
-### In Production!!! Below is the plan for this repo###
+# In Production!!! Below is the plan for this repo
 
 This is a modular Terraform blueprint to deploy a secure-by-default AWS environment suitable for small teams and prototyping with good security posture.
 
