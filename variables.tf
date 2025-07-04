@@ -1,3 +1,8 @@
+#Notes
+# Replace ami-0abcdef1234567890 with a valid AMI for your region (Amazon Linux 2 or Ubuntu).
+# bastion_key_name must match a key you’ve uploaded in EC2 → Key Pairs.
+# iam_users can expanded as needed
+
 variable "project" {
   description = "Project name prefix used in resource naming"
   type        = string
