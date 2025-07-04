@@ -64,5 +64,7 @@ module "iam" {
 module "guardduty" {
   source            = "./modules/guardduty"
   enable_guardduty  = true
+  environment       = var.environment
   tags              = var.tags
 }
+
