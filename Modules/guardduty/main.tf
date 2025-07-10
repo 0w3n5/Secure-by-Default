@@ -61,6 +61,12 @@ resource "aws_cloudwatch_event_target" "gd_logs_target" {
   role_arn  = aws_iam_role.eventbridge_to_logs.arn
 }
 
+#to send it to email
+resource "aws_cloudwatch_event_target" "gd_sns_target" {
+  rule      = aws_cloudwatch_event_rule.gd_finding_rule.name
+  arn       = aws_sns_topic.gd_alerts.arn
+}
+
 # SNS Topic for GuardDuty Alerts
 resource "aws_sns_topic" "gd_alerts" {
   name = "guardduty-alerts"
